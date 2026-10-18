@@ -493,6 +493,25 @@
     </div>
 
     <script>
+      function toggleMobileMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      }
+
+      document
+        .getElementById("mobile-menu-btn")
+        ?.addEventListener("click", toggleMobileMenu);
+    });
       window.addEventListener("DOMContentLoaded", () => {
         if (window.renderMathInElement) {
           renderMathInElement(document.body, {
@@ -507,6 +526,11 @@
           .getElementById("mobile-menu-btn")
           ?.addEventListener("click", toggleMobileMenu);
       });
-    </script>
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.add("hidden");
+      });
+    });
+      </script>
   </body>
 </html>
