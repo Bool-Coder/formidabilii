@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formidabilii - Rezultate</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                50: "#f0f4f8",
+                100: "#d9e2ec",
+                800: "#1e293b",
+                900: "#0f172a",
+                950: "#080d1a",
+              },
+              emerald: {
+                500: "#10b981",
+                600: "#059669",
+                700: "#047857",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen"
+  >
+    <header
+      class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur-md text-white border-b border-slate-800 shadow-lg"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="acasa" class="flex items-center gap-3">
+            <div>
+              <span
+                class="text-xl font-bold tracking-tight block text-white leading-tight"
+                >Formidabilii</span
+              >
+              <span
+                class="text-xs text-emerald-400 font-medium tracking-wider uppercase"
+              ></span>
+            </div>
+          </a>
+
+          <!-- Multi-page Nav Links -->
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-medium h-full"
+          >
+            <a
+  href="acasa"
+  class="py-7 text-slate-300 hover:text-emerald-400 transition-all"
+>
+  Acasă
+</a>
+
+<a
+  href="rezultate"
+  class="py-7 text-emerald-400 border-b-2 border-emerald-400 font-semibold"
+>
+  Rezultate
+</a>
+            <a
+              href="reguli"
+              class="py-7 text-slate-300 hover:text-emerald-400 transition-all"
+              >Reguli</a
+            >
+            <a
+              href="contact"
+              class="py-7 text-slate-300 hover:text-emerald-400 transition-all"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Registration Trigger Button -->
+          <div class="hidden sm:flex items-center">
+            <a
+              href=""
+              class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs px-4 py-2.5 rounded-lg shadow-md transition-all hover:scale-105"
+              >Înregistrare</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden text-slate-300 hover:text-white text-2xl p-2 focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3"
+      >
+        <a
+          href="acasa"
+          class="block px-3 py-2 rounded-md text-emerald-400 bg-navy-800 font-semibold"
+          >Acasǎ</a
+        >
+        <a
+          href="rezultate"
+          class="block px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800"
+          >Rezultate</a
+        >
+        <a
+          href="reguli"
+          class="block px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800"
+          >Reguli</a
+        >
+        <a
+          href="contact"
+          class="block px-3 py-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800"
+          >Contact</a
+        >
+        <a
+          href=""
+          class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs px-4 py-2.5 rounded-lg shadow-md transition-all hover:scale-105"
+          >Înregistrare</a
+        >
+      </div>
+    </header>
+
+    <main class="flex-grow py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+          <h1 class="text-3xl font-extrabold text-navy-900">
+            Rezultate Concurs
+          </h1>
+          <p class="text-slate-600 text-sm mt-1">
+            Afișarea rezultatelor oficiale pentru ediția curentă.
+          </p>
+        </div>
+
+        <!-- Section 1: PDF Viewer / Download Container -->
+        <div
+          class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 mb-8"
+        >
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-100"
+          >
+            <div>
+              <h3 class="font-bold text-navy-900 text-base">
+                Link google drive
+              </h3>
+              <p class="text-xs text-slate-500">
+                Puteți descărca sau vizualiza tabelul complet aprobat de
+                comisie.
+              </p>
+            </div>
+            <a
+              href="#"
+              id="download-btn"
+              class="bg-navy-900 hover:bg-navy-800 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-2"
+            >
+              <i class="fa-solid fa-file-pdf text-emerald-400"></i> Descarcă PDF
+              Rezultate
+            </a>
+          </div>
+
+          <!-- PDF Embed Container -->
+          
+          </div>
+        </div>
+
+ 
+        
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
